@@ -27,6 +27,6 @@ function initialize(lat,lon){
     var marker = new google.maps.Marker({
         position: latlng, 
         map: map, 
-        title:"Mi posición actual"
+        title:"Mi posición"
     });
 }
