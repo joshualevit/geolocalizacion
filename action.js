@@ -1,8 +1,7 @@
 $(document).ready(function(){
-    document.addEventListener("deviceready", 
-    function(){
+    document.addEventListener("deviceready", function(){
         var onSuccess = function(position) {    
-            alert(position.coords.latitude,position.coords.longitude);
+        initialize(position.coords.latitude,position.coords.longitude);
         };
                   // onError Callback receives a PositionError object
                   //
@@ -15,6 +14,7 @@ $(document).ready(function(){
 
 function initialize(lat, lon) {
 				//Posición del mapa
+                var latlng = new google.maps.LatLng(lat, lon);
 				var myOptions = {
 					zoom: 10,
 					center: latlng,
